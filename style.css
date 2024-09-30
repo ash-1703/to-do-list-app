@@ -1,85 +1,126 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins',san-serif;
-    box-sizing: border-box;
+/* Universal selector to apply basic resets and styles to all elements */
+* {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: 'Poppins', sans-serif; /* Set font family for the entire document */
+    box-sizing: border-box; /* Include padding and border in element's width and height */
 }
-.container{
-    width: 100%;
-    min-height: 100vh;
-    background: #433878;
-    padding: 10px;
-}
-.todo-app{
-    width: 100%;
-    max-width: 540px;
-    background: #E4B1F0;
-    margin: 100px auto 20px;
-    padding: 40px 30px 70px;
-    border-radius: 10px;
-}
-.todo-app h2{
-    color: #7E60BF;
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-.todo-app h2 img{
-    width: 30px;
-    margin-left: 10px;
-}
-.row{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #edeef0;
-    border-radius: 30px;
-    padding-left: 20px;
-    margin-bottom: 25px;
-}
-input{
-    flex: 1;
-    border: none;
-    outline: none;
-    background: transparent;
-    padding: 10px;
-    font-weight: 14px;
-}
-button{
-    border: none;
-    outline: none;
-    padding: 16px 50px;
-    background: #7E60BF;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 40px;
 
+/* Main container for the application */
+.container {
+    width: 100%; /* Full width container */
+    min-height: 100vh; /* Minimum height to cover the full viewport height */
+    background: #433878; /* Dark purple background color */
+    padding: 10px; /* Add some padding inside the container */
 }
-ul li{
-    list-style: none;
-    font-size: 17px;
-    padding: 12px 8px 12px 50px;
-    user-select: none;
-    cursor: pointer;
-    position: relative;
+
+/* To-Do App box styling */
+.todo-app {
+    width: 100%; /* Full width inside its parent container */
+    max-width: 540px; /* Limit the maximum width */
+    background: #E4B1F0; /* Light pinkish background color */
+    margin: 100px auto 20px; /* Center align and add vertical spacing */
+    padding: 40px 30px 70px; /* Space inside the container */
+    border-radius: 10px; /* Rounded corners */
 }
-ul li::before{
-    content: '';
-    position: absolute;
-    height: 28px;
-    width: 28px;
-    border-radius: 50%;
-    background-image: url(images/unchecked.png);
-    background-size: cover;
-    background-position: center;
-    top: 12px;
-    left: 8px;
+
+/* Header styling inside the To-Do App */
+.todo-app h2 {
+    color: #7E60BF; /* Darker purple text color */
+    display: flex; /* Flexbox for alignment */
+    align-items: center; /* Center align vertically */
+    margin-bottom: 20px; /* Space below the header */
 }
-ul li.checked{
-    color: #555;
-    text-decoration: line-through;
+
+/* Image styling inside the header */
+.todo-app h2 img {
+    width: 30px; /* Fixed width for the icon */
+    margin-left: 10px; /* Space between text and image */
 }
-ul li.checked::before{
-    background-image: url(images/checked.png);
+
+/* Row container for input field and button */
+.row {
+    display: flex; /* Flexbox layout */
+    align-items: center; /* Center align vertically */
+    justify-content: space-between; /* Distribute space between elements */
+    background: #edeef0; /* Light grey background */
+    border-radius: 30px; /* Rounded corners */
+    padding-left: 20px; /* Left padding for the input field */
+    margin-bottom: 25px; /* Space below the row */
+}
+
+/* Input field styling */
+input {
+    flex: 1; /* Take remaining space inside the flex container */
+    border: none; /* Remove default border */
+    outline: none; /* Remove default outline */
+    background: transparent; /* Transparent background */
+    padding: 10px; /* Inner padding */
+    font-weight: 14px; /* Font weight */
+}
+
+/* Button styling */
+button {
+    border: none; /* Remove default border */
+    outline: none; /* Remove default outline */
+    padding: 16px 50px; /* Inner padding for the button */
+    background: #7E60BF; /* Background color */
+    color: #fff; /* Text color */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 40px; /* Rounded corners */
+}
+
+/* List item styling */
+ul li {
+    list-style: none; /* Remove default list style */
+    font-size: 17px; /* Font size */
+    padding: 12px 8px 12px 50px; /* Inner padding */
+    user-select: none; /* Prevent text selection */
+    cursor: pointer; /* Pointer cursor */
+    position: relative; /* Position relative for pseudo-elements */
+}
+
+/* Pseudo-element styling for the checkbox before list items */
+ul li::before {
+    content: ''; /* Empty content for the pseudo-element */
+    position: absolute; /* Position relative to parent li */
+    height: 28px; /* Fixed height */
+    width: 28px; /* Fixed width */
+    border-radius: 50%; /* Circular shape */
+    background-image: url(images/unchecked.png); /* Default unchecked image */
+    background-size: cover; /* Cover background */
+    background-position: center; /* Center align the image */
+    top: 12px; /* Position from top */
+    left: 8px; /* Position from left */
+}
+
+/* Styling for checked list items */
+ul li.checked {
+    color: #555; /* Change text color to grey */
+    text-decoration: line-through; /* Strike-through the text */
+}
+
+/* Pseudo-element styling for checked list items */
+ul li.checked::before {
+    background-image: url(images/checked.png); /* Change image to checked state */
+}
+
+/* Close button styling for each list item */
+ul li span {
+    position: absolute; /* Position relative to parent li */
+    right: 0; /* Align to the right */
+    top: 5px; /* Align vertically */
+    width: 40px; /* Fixed width */
+    height: 40px; /* Fixed height */
+    font-size: 22px; /* Font size */
+    color: #555; /* Text color */
+    line-height: 40px; /* Center text vertically */
+    text-align: center; /* Center text horizontally */
+    border-radius: 50%; /* Circular button */
+}
+
+/* Hover effect for the close button */
+ul li span:hover {
+    background: #edeef0; /* Change background on hover */
 }
