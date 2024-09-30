@@ -11,8 +11,7 @@ This is a simple, interactive To-Do List application built using HTML, CSS, and 
 4. [Setup and Installation](#setup-and-installation)
 5. [How to Use](#how-to-use)
 6. [Contributing](#contributing)
-7. [License](#license)
-8. [Acknowledgements](#acknowledgements)
+7. [Acknowledgements](#acknowledgements)
 
 ## Features
 
@@ -92,9 +91,6 @@ Contributions are welcome! If you'd like to contribute to this project:
 2. Create a new branch for your feature or bugfix.
 3. Submit a pull request with a detailed explanation of your changes.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
