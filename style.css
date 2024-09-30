@@ -18,7 +18,7 @@
 .todo-app {
     width: 100%; /* Full width inside its parent container */
     max-width: 540px; /* Limit the maximum width */
-    background: #E4B1F0; /* Light pinkish background color */
+    background: #ffffff; /* Light pinkish background color */
     margin: 100px auto 20px; /* Center align and add vertical spacing */
     padding: 40px 30px 70px; /* Space inside the container */
     border-radius: 10px; /* Rounded corners */
@@ -103,7 +103,7 @@ ul li.checked {
 
 /* Pseudo-element styling for checked list items */
 ul li.checked::before {
-    background-image: url(images/checked.png); /* Change image to checked state */
+    background-image: url(images/image.png); /* Change image to checked state */
 }
 
 /* Close button styling for each list item */
